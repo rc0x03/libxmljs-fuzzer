@@ -13,6 +13,10 @@ Array.prototype.random = function() {
     return this[Math.floor(Math.random()*this.length)]
 }
 
+libxmljs.Comment.prototype.name = function() {
+    return this.toString();
+}
+
 libxmljs.Text.prototype.name = function() {
     return this.toString();
 }
