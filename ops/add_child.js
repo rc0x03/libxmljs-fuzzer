@@ -5,6 +5,6 @@ module.exports = function(libxmljs, docs, nodes, log) {
     if (parent.type() !== 'element')
         return false;
     if (child.parent() && child.parent() == parent) return false;
-    log("adding "+child.name()+" to "+parent.name())
+    log(child.name()+" to "+parent.name())
     parent.addChild(child);
 }

@@ -1,7 +1,7 @@
 var fs          = require('fs');
 var libxmljs    = require('libxmljs');
 
-var maxCycles = 100;
+var maxCycles = 500;
 var maxOps = 10;
 
 if (!global.gc) {

@@ -11,4 +11,5 @@ module.exports = function(libxmljs, docs, nodes, log) {
 var types = [
     'a',
     'b',
+    'c'
 ]
