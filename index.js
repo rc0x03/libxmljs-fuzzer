@@ -13,10 +13,6 @@ Array.prototype.random = function() {
     return this[Math.floor(Math.random()*this.length)]
 }
 
-libxmljs.Document.prototype.doc = function() {
-    return this;
-}
-
 var ops = [];
 Object.defineProperty(ops, 'length', { value: 0, writable: true })
 fs.readdirSync(__dirname+'/ops').forEach(function(file) {
@@ -31,7 +27,8 @@ function log(msg) {
 
 var cycles = 0;
 while (cycles++ < maxCycles) {
-    console.log('\033[2J\033[1;1HCycle '+cycles);
+    process.stdout.write('\033[2J\033[1;1H'); // reset console
+    console.log('Cycle '+cycles);
     var docs = [new libxmljs.Document];
     var nodes = [new libxmljs.Element(docs[0], 'firstNode')];
     for (var op = 1; op <= maxOps; op++) {
