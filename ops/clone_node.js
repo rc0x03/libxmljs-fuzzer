@@ -3,7 +3,7 @@ module.exports = function(libxmljs, docs, nodes, log) {
     if (!node) return false;
     log(node.name())
     var clone = node.clone();
-    clone.name(clone.name()+'Clone')
+    clone.name(clone.name()+'_clone')
     log(clone.name())
     nodes.push(clone);
 }
