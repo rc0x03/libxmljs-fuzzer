@@ -13,6 +13,10 @@ Array.prototype.random = function() {
     return this[Math.floor(Math.random()*this.length)]
 }
 
+libxmljs.Text.prototype.name = function() {
+    return this.toString();
+}
+
 var ops = [];
 Object.defineProperty(ops, 'length', { value: 0, writable: true })
 fs.readdirSync(__dirname+'/ops').forEach(function(file) {
