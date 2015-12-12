@@ -34,7 +34,7 @@ while (cycles++ < maxCycles) {
     process.stdout.write('\033[2J\033[1;1H'); // reset console
     console.log('Cycle '+cycles);
     var docs = [new libxmljs.Document];
-    var nodes = [new libxmljs.Element(docs[0], 'firstNode')];
+    var nodes = [new libxmljs.Element(docs[0], 'a1')];
     for (var op = 1; op <= maxOps; op++) {
         if (random_operation(libxmljs, docs, nodes, log) === false) {
             op--;
